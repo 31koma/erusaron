@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <radialGradient id="g" cx="30%" cy="20%" r="85%">
+      <stop offset="0" stop-color="#fffdf9"/>
+      <stop offset="0.58" stop-color="#f8f4ef"/>
+      <stop offset="1" stop-color="#d7b8b2"/>
+    </radialGradient>
+  </defs>
+  <rect width="128" height="128" rx="30" fill="url(#g)"/>
+  <circle cx="64" cy="64" r="40" fill="none" stroke="#b89d6a" stroke-width="4"/>
+  <circle cx="64" cy="64" r="29" fill="none" stroke="#d7b8b2" stroke-width="1.5"/>
+  <text x="64" y="73" text-anchor="middle" font-family="Didot, Georgia, serif" font-size="34" fill="#322c28" letter-spacing="-1">ERU</text>
+</svg>

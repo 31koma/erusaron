@@ -183,7 +183,8 @@ main {
 }
 
 .hero-media.home {
-  background-image: url("https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=1800&q=82");
+  background-image: url("assets/photos/eru-salon-window.jpg");
+  background-position: center 42%;
 }
 
 .hero-media.about {
@@ -200,6 +201,10 @@ main {
   z-index: -1;
   background: linear-gradient(90deg, rgba(40, 34, 30, 0.62), rgba(40, 34, 30, 0.28), rgba(40, 34, 30, 0.1));
   content: "";
+}
+
+.hero-media.home::after {
+  background: linear-gradient(90deg, rgba(38, 32, 28, 0.74), rgba(38, 32, 28, 0.42), rgba(38, 32, 28, 0.18));
 }
 
 .hero-content {
@@ -310,6 +315,18 @@ h3 {
   object-fit: cover;
 }
 
+.image-frame img.focus-top {
+  object-position: center 22%;
+}
+
+.image-frame img.focus-left {
+  object-position: 28% center;
+}
+
+.image-frame img.focus-bottom {
+  object-position: center 70%;
+}
+
 .card-grid,
 .menu-grid,
 .product-grid,
@@ -334,6 +351,14 @@ h3 {
 
 .gallery-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.gallery-grid.spotlight {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.gallery-grid.spotlight img {
+  height: min(72vw, 620px);
 }
 
 .card,
@@ -381,6 +406,20 @@ h3 {
   width: 100%;
   height: 260px;
   object-fit: cover;
+}
+
+.menu-card img.focus-top,
+.gallery-grid img.focus-top {
+  object-position: center 18%;
+}
+
+.menu-card img.focus-left,
+.gallery-grid img.focus-left {
+  object-position: 28% center;
+}
+
+.gallery-grid img.tall {
+  height: 360px;
 }
 
 .menu-card div,

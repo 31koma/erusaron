@@ -418,8 +418,21 @@ h3 {
   object-position: 28% center;
 }
 
+.menu-card img.show-full,
+.gallery-grid img.show-full {
+  aspect-ratio: 1194 / 1488;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  background: #fffaf7;
+}
+
 .gallery-grid img.tall {
   height: 360px;
+}
+
+.gallery-grid img.tall.show-full {
+  height: auto;
 }
 
 .menu-card div,
@@ -626,6 +639,11 @@ th {
   .menu-card img,
   .blog-card img {
     height: 230px;
+  }
+
+  .gallery-grid img.show-full,
+  .menu-card img.show-full {
+    height: auto;
   }
 }
 

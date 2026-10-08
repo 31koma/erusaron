@@ -327,6 +327,13 @@ h3 {
   object-position: center 70%;
 }
 
+.image-frame img.show-full {
+  height: auto;
+  min-height: 0;
+  object-fit: contain;
+  background: #fffaf7;
+}
+
 .card-grid,
 .menu-grid,
 .product-grid,

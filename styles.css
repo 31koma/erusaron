@@ -50,14 +50,13 @@ a {
   justify-content: space-between;
   gap: 18px;
   padding: 16px clamp(18px, 4vw, 54px);
-  background: rgba(255, 253, 249, 0.84);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(18px);
+  background: var(--ivory);
+  border-bottom: 1px solid var(--line);
   transition: box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .site-header.is-scrolled {
-  background: rgba(255, 253, 249, 0.96);
+  background: var(--ivory);
   box-shadow: 0 12px 30px rgba(50, 44, 40, 0.08);
 }
 
@@ -168,10 +167,12 @@ main {
 
 .hero {
   position: relative;
+  isolation: isolate;
   display: grid;
   min-height: 92svh;
   place-items: end start;
   padding: 120px clamp(22px, 6vw, 78px) 70px;
+  background: var(--ink);
   color: #fff;
 }
 
@@ -223,6 +224,11 @@ main {
 
 .hero .eyebrow {
   color: #ead9bd;
+}
+
+.section .eyebrow,
+.section-band .eyebrow {
+  color: var(--muted);
 }
 
 h1,
@@ -454,7 +460,7 @@ h3 {
   padding: 0 12px;
   border: 1px solid rgba(184, 157, 106, 0.42);
   border-radius: 999px;
-  color: var(--gold);
+  color: var(--muted);
   font-size: 12px;
 }
 
@@ -487,7 +493,7 @@ td {
 }
 
 th {
-  color: var(--gold);
+  color: var(--muted);
   font-weight: 500;
 }
 
@@ -562,7 +568,7 @@ th {
   padding: 13px 16px;
   background: rgba(50, 44, 40, 0.94);
   color: #fff;
-  font-size: 12px;
+  font-size: 13px;
   text-align: center;
 }
 
@@ -594,6 +600,19 @@ th {
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 @media (max-width: 980px) {
